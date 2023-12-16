@@ -1,0 +1,31 @@
+*,
+::after,
+::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter-Regular";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../assets/fonts/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("../assets/fonts/static/Inter-SemiBold.ttf");
+}/*# sourceMappingURL=index.css.map */
