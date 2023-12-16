@@ -1,0 +1,15 @@
+#card__info {
+    gap: 4rem;
+    display: flex;
+    margin-top: 12.8rem;
+    flex-direction: column;
+    padding: 0 2.9rem 5.6rem 1.9rem;
+
+    .card {
+        h3 {
+            margin-top: 3.2rem;
+            line-height: 1.2085;
+            margin-bottom: 2.4rem;
+        }
+    }
+}
