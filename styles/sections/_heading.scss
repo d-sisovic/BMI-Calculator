@@ -1,4 +1,5 @@
 @use "../variables";
+@use "../breakpoints";
 
 #heading {
     position: relative;
@@ -11,7 +12,7 @@
         z-index: -1;
         height: 64rem;
         position: absolute;
-        border-radius: 0px 0px 3.5rem 3.5rem;
+        border-radius: 0 0 3.5rem 3.5rem;
         background: var(--Gradient-1, linear-gradient(290deg, variables.$blue-gradient 0%, rgba(214, 252, 254, 0.00) 100%));
     }
 
@@ -37,7 +38,7 @@
         border-radius: 1rem;
         flex-direction: column;
         background: variables.$pure-white;
-        box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+        box-shadow: 1.6rem 3.2rem 5.6rem 0 rgba(143, 174, 207, 0.25);
 
         &__heading {
             display: flex;
@@ -61,7 +62,7 @@
                 font-family: "Inter-SemiBold";
 
                 &:hover {
-                    input:not(:checked) ~ .checkmark {
+                    input:not(:checked)~.checkmark {
                         outline: 1px solid variables.$blue;
                     }
                 }
@@ -115,7 +116,7 @@
         #imperial {
             display: none;
 
-            > div {
+            >div {
                 flex-direction: row;
                 align-items: flex-end;
             }
@@ -158,7 +159,7 @@
 
                     ::placeholder {
                         opacity: 0.25;
-                      }
+                    }
                 }
             }
 
@@ -199,6 +200,58 @@
             p {
                 line-height: 150%;
                 font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@include breakpoints.mq(tablet) {
+    #heading {
+        padding-left: 3.9rem;
+        padding-right: 3.9rem;
+
+        .heading {
+
+            .heading--l {
+                width: 35rem;
+                margin: 4rem auto 2.4rem auto;
+            }
+        }
+
+        .card {
+            gap: 3.2rem;
+            padding: 3.2rem;
+            margin-top: 4rem;
+
+            &__heading {
+                justify-content: flex-start;
+
+                label {
+                    flex: 1 1 50%;
+                }
+            }
+
+            &__body {
+                gap: 2.4rem;
+            }
+
+            #metric {
+                flex-direction: row;
+            }
+
+            &__footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 16rem 99.9rem 99.9rem 16rem;
+
+                #bmi {
+                    margin-bottom: 0;
+                }
+
+                >* {
+                    flex: 1 1 50%;
+                }
             }
         }
     }
