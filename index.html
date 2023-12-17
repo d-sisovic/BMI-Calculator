@@ -7,10 +7,10 @@
     <meta name="description" content="Document">
     <meta name="author" content="Daniel Sisovic">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frontend Mentor BMI Calculator</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <title>Frontend Mentor | Results summary component</title>
+    <title>Frontend Mentor | BMI Calculator</title>
 
     <link rel="stylesheet" href="./styles/index.css">
     <meta name="description" content="Frontend Mentor BMI Calculator">
@@ -55,7 +55,35 @@
                 </label>
             </div>
 
-            <div class="card__body">
+            <div class="card__body" id="imperial">
+                <div>
+                    <div>
+                        <label for="height-ft">Height</label>
+                        <input type="number" name="height-ft" id="height-ft" placeholder="0">
+                        <span class="card__body__unit">ft</span>
+                    </div>
+
+                    <div>
+                        <input type="number" name="height-in" id="height-in" placeholder="0">
+                        <span class="card__body__unit">in</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="height">Weight</label>
+                        <input type="number" name="weight-st" id="weight-st" placeholder="0">
+                        <span class="card__body__unit">st</span>
+                    </div>
+
+                    <div>
+                        <input type="number" name="weight-lbs" id="weight-lbs" placeholder="0">
+                        <span class="card__body__unit">lbs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__body" id="metric">
                 <div>
                     <label for="height">Height</label>
                     <input type="number" name="height" id="height" placeholder="0">
@@ -70,11 +98,11 @@
             </div>
 
             <div class="card__footer">
-                <h3>Your BMI is...</h3>
+                <h3 id="bmi-welcome">Welcome</h3>
 
-                <span>23.4</span>
+                <span id="bmi"></span>
 
-                <p>Your BMI suggests you're a healthy weight. Your ideal weight is between <b>63.3kgs - 85.2kgs.</b></p>
+                <p id="bmi-text">Enter your height and weight and you'll see your BMI result here</p>
             </div>
         </div>
     </section>
@@ -207,6 +235,8 @@
             </div>
         </div>
     </section>
+
+    <script src="/index.js"></script>
 </body>
 
 </html>

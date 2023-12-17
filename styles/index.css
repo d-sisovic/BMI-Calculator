@@ -169,7 +169,7 @@ img {
   color: #253347;
   font-family: "Inter-SemiBold";
 }
-#heading .card__heading .radio:hover input ~ .checkmark {
+#heading .card__heading .radio:hover input:not(:checked) ~ .checkmark {
   outline: 1px solid #345FF6;
 }
 #heading .card__heading .radio input {
@@ -207,6 +207,16 @@ img {
   background: #345FF6;
   transform: translateY(-50%) translateX(-50%);
 }
+#heading .card #metric {
+  display: flex;
+}
+#heading .card #imperial {
+  display: none;
+}
+#heading .card #imperial > div {
+  flex-direction: row;
+  align-items: flex-end;
+}
 #heading .card__body {
   gap: 1.6rem;
   display: flex;
@@ -229,7 +239,7 @@ img {
   font-size: 2.4rem;
   line-height: 1.142;
   padding: 2rem 2.4rem;
-  padding-right: 8.3rem;
+  padding-right: 6.3rem;
   border-radius: 1.2rem;
   letter-spacing: -1.2px;
   color: #253347;
@@ -269,9 +279,9 @@ img {
   font-family: "Inter-SemiBold";
 }
 #heading .card__footer span {
+  display: none;
   font-size: 4.8rem;
   line-height: 110%;
-  display: inline-block;
   margin-bottom: 2.4rem;
   letter-spacing: -2.4px;
   font-family: "Inter-SemiBold";
