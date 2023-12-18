@@ -56,12 +56,16 @@
     const clearBmiResult = () => {
         const bmiElement = document.querySelector('#bmi');
         const bmiTextElement = document.querySelector('#bmi-text');
+        const bmiResultElement = document.querySelector('#bmi-result');
         const bmiWelcomeElement = document.querySelector('#bmi-welcome');
+        const cardFooterElement = document.querySelector('.card__footer');
         const numberInputFields = document.querySelectorAll('input[type="number"]');
 
         numberInputFields.forEach(input => input.value = '');
 
+        bmiResultElement.style.gap = '0';
         bmiElement.style.display = 'none';
+        cardFooterElement.style.gap = '0.8rem';
         bmiWelcomeElement.textContent = 'Welcome';
         bmiTextElement.textContent = 'Enter your height and weight and you\'ll see your BMI result here';
     };
@@ -69,9 +73,13 @@
     const setBmiText = (bmi, height) => {
         const bmiElement = document.querySelector('#bmi');
         const bmiTextElement = document.querySelector('#bmi-text');
+        const bmiResultElement = document.querySelector('#bmi-result');
         const bmiWelcomeElement = document.querySelector('#bmi-welcome');
+        const cardFooterElement = document.querySelector('.card__footer');
 
         bmiElement.textContent = bmi;
+        bmiResultElement.style.gap = '0.8rem';
+        cardFooterElement.style.gap = '2.4rem';
         bmiElement.style.display = 'inline-block';
         bmiWelcomeElement.textContent = 'Your BMI is...';
         bmiTextElement.innerHTML = getBmiTextDescription(Number.parseFloat(bmi), height);

@@ -34,3 +34,19 @@
         }
     }
 }
+
+@include breakpoints.mq(desktop) {
+    #card__info { 
+        gap: 2.4rem;
+        flex-direction: row;
+        background: transparent;
+        padding: 7.2rem 0 9.6rem 0;
+        margin: 9.6rem 14rem 0 14rem;
+
+        .card {
+            gap: 4.5rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

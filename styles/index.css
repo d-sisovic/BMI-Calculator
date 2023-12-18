@@ -39,7 +39,7 @@ img {
 
 .heading--m {
   font-size: 2.4rem;
-  line-height: 110%;
+  line-height: 1.2085;
   letter-spacing: -1.2px;
   color: #253347;
   font-family: "Inter-SemiBold";
@@ -67,6 +67,14 @@ img {
   font-family: "Inter-SemiBold";
 }
 
+@media (min-width: 90em) {
+  .heading--l {
+    font-size: 6.4rem;
+  }
+  .main__heading {
+    font-size: 4.8rem;
+  }
+}
 #card__info {
   gap: 4rem;
   display: flex;
@@ -95,14 +103,31 @@ img {
     margin-top: 0;
   }
 }
-#limitation {
-  padding: 7.2rem 2.9rem 9.6rem 1.9rem;
+@media (min-width: 90em) {
+  #card__info {
+    gap: 2.4rem;
+    flex-direction: row;
+    background: transparent;
+    padding: 7.2rem 0 9.6rem 0;
+    margin: 9.6rem 14rem 0 14rem;
+  }
+  #card__info .card {
+    gap: 4.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
-#limitation h1 {
+#limitation {
+  margin: 7.2rem 2.9rem 9.6rem 1.9rem;
+}
+#limitation .header img {
+  display: none;
+}
+#limitation .header h1 {
   margin-bottom: 3.2rem;
 }
-#limitation > h1,
-#limitation > p {
+#limitation .header > h1,
+#limitation .header > p {
   text-align: center;
 }
 #limitation .body {
@@ -130,7 +155,7 @@ img {
 
 @media (min-width: 48em) {
   #limitation {
-    padding: 9.6rem 4.3rem 9.6rem 3.9rem;
+    margin: 9.6rem 4.3rem 9.6rem 3.9rem;
   }
   #limitation .body {
     flex-wrap: wrap;
@@ -141,6 +166,52 @@ img {
   #limitation .body .card {
     padding: 3.2rem;
     max-width: calc(50% - 0.8rem);
+  }
+}
+@media (min-width: 90em) {
+  #limitation {
+    display: grid;
+    height: 70.4rem;
+    position: relative;
+    margin: 12rem 14rem;
+  }
+  #limitation .header {
+    width: 56.4rem;
+    height: 18.4rem;
+    position: relative;
+  }
+  #limitation .header h1 {
+    margin-bottom: 3.5rem;
+  }
+  #limitation .header img {
+    right: 50%;
+    bottom: -100%;
+    display: block;
+    position: absolute;
+  }
+  #limitation .body .card {
+    width: 36.5rem;
+  }
+  #limitation .body .card:nth-child(1) {
+    top: 0;
+    right: 9.9rem;
+    position: absolute;
+  }
+  #limitation .body .card:nth-child(2), #limitation .body .card:nth-child(3) {
+    right: 0;
+    top: 26.4rem;
+    position: absolute;
+  }
+  #limitation .body .card:nth-child(2) {
+    right: 40rem;
+  }
+  #limitation .body .card:nth-child(4), #limitation .body .card:nth-child(5) {
+    top: 47.2rem;
+    right: 19.9rem;
+    position: absolute;
+  }
+  #limitation .body .card:nth-child(4) {
+    right: 59.6rem;
   }
 }
 #heading {
@@ -297,22 +368,29 @@ img {
   font-family: "Inter-SemiBold";
 }
 #heading .card__footer {
+  gap: 0.8rem;
+  display: flex;
   padding: 3.2rem;
   border-radius: 1.6rem;
+  flex-direction: column;
+  align-items: flex-start;
   color: #FFFFFF;
   background: linear-gradient(90deg, #345FF6 0%, #587DFF 100%);
 }
-#heading .card__footer h3 {
+#heading .card__footer div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+#heading .card__footer div h3 {
   font-size: 1.6rem;
   line-height: 150%;
-  margin-bottom: 0.8rem;
   font-family: "Inter-SemiBold";
 }
-#heading .card__footer span {
+#heading .card__footer div span {
   display: none;
   font-size: 4.8rem;
   line-height: 110%;
-  margin-bottom: 2.4rem;
   letter-spacing: -2.4px;
   font-family: "Inter-SemiBold";
 }
@@ -326,6 +404,9 @@ img {
     padding-left: 3.9rem;
     padding-right: 3.9rem;
   }
+  #heading .heading__background {
+    left: 2.4rem;
+  }
   #heading .heading .heading--l {
     width: 35rem;
     margin: 4rem auto 2.4rem auto;
@@ -336,6 +417,7 @@ img {
     margin-top: 4rem;
   }
   #heading .card__heading {
+    gap: 2.4rem;
     justify-content: flex-start;
   }
   #heading .card__heading label {
@@ -348,7 +430,7 @@ img {
     flex-direction: row;
   }
   #heading .card__footer {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     border-radius: 16rem 99.9rem 99.9rem 16rem;
@@ -360,12 +442,48 @@ img {
     flex: 1 1 50%;
   }
 }
+@media (min-width: 90em) {
+  #heading {
+    gap: 3.2rem;
+    display: flex;
+    padding: 7.5rem 14rem 0 14rem;
+  }
+  #heading .heading__background {
+    width: 97.8rem;
+    height: 73.7rem;
+  }
+  #heading .heading {
+    width: 100%;
+    text-align: left;
+    max-width: 56.4rem;
+  }
+  #heading .heading .logo {
+    margin-left: 0;
+  }
+  #heading .heading .heading--l {
+    width: 85%;
+    margin: 12.7rem 0 3.5rem 0;
+  }
+  #heading .heading .text {
+    width: 46.5rem;
+  }
+  #heading .card {
+    margin-top: 6.8rem;
+  }
+  #heading .card__footer #bmi {
+    font-size: 6.4rem;
+  }
+}
 #explanation {
   margin-top: 7.2rem;
 }
 #explanation div {
+  position: relative;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+}
+#explanation div img {
+  display: none;
 }
 #explanation div h1 {
   margin-top: 4.8rem;
@@ -399,5 +517,35 @@ img {
   }
   #explanation div h1 {
     margin-top: 3.5rem;
+  }
+}
+@media (min-width: 90em) {
+  #explanation {
+    gap: 13.1rem;
+    margin: 0 auto;
+    margin-top: 21.3rem;
+    width: calc(100% - 28rem);
+  }
+  #explanation img {
+    width: 56.4rem;
+    height: 53.3rem;
+    transform: translateX(0);
+  }
+  #explanation div {
+    width: 46.5rem;
+    padding-right: 0;
+    align-self: flex-end;
+    padding-bottom: 4rem;
+  }
+  #explanation div img {
+    top: -23.6rem;
+    width: 8.5rem;
+    right: 1.35rem;
+    height: 20rem;
+    display: block;
+    position: absolute;
+  }
+  #explanation div h1 {
+    margin-top: 0;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -176,25 +176,33 @@
         }
 
         &__footer {
+            gap: 0.8rem;
+            display: flex;
             padding: 3.2rem;
             border-radius: 1.6rem;
+            flex-direction: column;
+            align-items: flex-start;
             color: variables.$pure-white;
             background: linear-gradient(90deg, variables.$blue 0%, #587DFF 100%);
 
-            h3 {
-                font-size: 1.6rem;
-                line-height: 150%;
-                margin-bottom: 0.8rem;
-                font-family: "Inter-SemiBold";
-            }
+            div {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
 
-            span {
-                display: none;
-                font-size: 4.8rem;
-                line-height: 110%;
-                margin-bottom: 2.4rem;
-                letter-spacing: -2.4px;
-                font-family: "Inter-SemiBold";
+                h3 {
+                    font-size: 1.6rem;
+                    line-height: 150%;
+                    font-family: "Inter-SemiBold";
+                }
+    
+                span {
+                    display: none;
+                    font-size: 4.8rem;
+                    line-height: 110%;
+                    letter-spacing: -2.4px;
+                    font-family: "Inter-SemiBold";
+                }
             }
 
             p {
@@ -210,8 +218,11 @@
         padding-left: 3.9rem;
         padding-right: 3.9rem;
 
-        .heading {
+        .heading__background {
+            left: 2.4rem;
+        }
 
+        .heading {
             .heading--l {
                 width: 35rem;
                 margin: 4rem auto 2.4rem auto;
@@ -224,6 +235,7 @@
             margin-top: 4rem;
 
             &__heading {
+                gap: 2.4rem;
                 justify-content: flex-start;
 
                 label {
@@ -240,7 +252,7 @@
             }
 
             &__footer {
-                display: flex;
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 border-radius: 16rem 99.9rem 99.9rem 16rem;
@@ -251,6 +263,48 @@
 
                 >* {
                     flex: 1 1 50%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoints.mq(desktop) {
+    #heading {
+        gap: 3.2rem;
+        display: flex;
+        padding: 7.5rem 14rem 0 14rem;
+
+        .heading__background {
+            width: 97.8rem;
+            height: 73.7rem;
+        }
+
+        .heading {
+            width: 100%;
+            text-align: left;
+            max-width: 56.4rem;
+
+            .logo {
+                margin-left: 0;
+            }
+
+            .heading--l {
+                width: 85%;
+                margin: 12.7rem 0 3.5rem 0;
+            }
+
+            .text {
+                width: 46.5rem;
+            }
+        }
+
+        .card {
+            margin-top: 6.8rem;
+
+            &__footer {
+                #bmi {
+                    font-size: 6.4rem;
                 }
             }
         }
