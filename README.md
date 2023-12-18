@@ -16,7 +16,7 @@ This is a solution to the [Body Mass Index Calculator challenge on Frontend Ment
 ### Links
 
 - Solution URL: []
-- Live Site URL: []
+- Live Site URL: [https://d-sisovic.github.io/BMI-Calculator/]
 
 ### Built with
 
