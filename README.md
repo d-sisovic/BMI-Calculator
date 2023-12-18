@@ -15,7 +15,7 @@ This is a solution to the [Body Mass Index Calculator challenge on Frontend Ment
 
 ### Links
 
-- Solution URL: []
+- Solution URL: [https://www.frontendmentor.io/solutions/bmi-calculator-vanilla-js-mq-ufNyPiG]
 - Live Site URL: [https://d-sisovic.github.io/BMI-Calculator/]
 
 ### Built with

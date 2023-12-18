@@ -108,6 +108,7 @@ img {
     gap: 2.4rem;
     flex-direction: row;
     border-radius: 3.5rem;
+    background: transparent;
     justify-content: center;
     padding: 7.2rem 0 9.6rem 0;
     margin: 9.6rem 14rem 0 14rem;
@@ -184,6 +185,10 @@ img {
   }
   #limitation .header h1 {
     margin-bottom: 3.5rem;
+  }
+  #limitation .header > h1,
+  #limitation .header > p {
+    text-align: left;
   }
   #limitation .header img {
     right: 50%;
